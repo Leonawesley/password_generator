@@ -97,7 +97,6 @@ function getPasswordOptions() {
   //To verify the password length
  if((passwordArray.passwordLength = prompt()) >= 10 && passwordArray.passwordLength <= 64){
     passwordArray = selectCharacterType(passwordArray);
-    console.log(passwordArray+"1");
     //To verify atleast one character type is selected
     while(((passwordArray.lowerCase) || (passwordArray.upperCase) || (passwordArray.numbers) || (passwordArray.specialChar )) == false){
       alert("Please select atleast one character type");
@@ -117,7 +116,7 @@ function selectCharacterType(passwordArray) {
   passwordArray.upperCase = confirm("Do you want upper case characters in your password");
   passwordArray.numbers = confirm("Do you want numbers in your password");
   passwordArray.specialChar = confirm("Do you want special characters in your password");
-  //console.log(passwordArray);
+  console.log(passwordArray);
   return passwordArray;
 }
 
