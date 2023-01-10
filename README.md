@@ -28,6 +28,6 @@ Please refer to the license in the repo
 
 ## Deployed github link
 
-* 
+*  https://leonawesley.github.io/password_generator/
 
-* 
+*  https://github.com/Leonawesley/password_generator
