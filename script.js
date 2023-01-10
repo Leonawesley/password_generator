@@ -89,14 +89,15 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
-
+let passwordArray = [];
+let passwordLength = 0;
 function getPasswordOptions() {
-  let passwordArray = [];
-  let passwordLength = 0;
+ 
   alert("Enter the length of your password (length between 10 and 64)");
   //To verify the password length
  if((passwordArray.passwordLength = prompt()) >= 10 && passwordArray.passwordLength <= 64){
     passwordArray = selectCharacterType(passwordArray);
+    console.log(passwordArray+"1");
     //To verify atleast one character type is selected
     while(((passwordArray.lowerCase) || (passwordArray.upperCase) || (passwordArray.numbers) || (passwordArray.specialChar )) == false){
       alert("Please select atleast one character type");
@@ -108,8 +109,7 @@ function getPasswordOptions() {
     alert("Please enter the password length between 10 and 64 ");
     getPasswordOptions();
   }
-  //console.log(passwordArray.passwordLength);
-  
+  return passwordArray;
 }
 
 function selectCharacterType(passwordArray) {
@@ -117,7 +117,7 @@ function selectCharacterType(passwordArray) {
   passwordArray.upperCase = confirm("Do you want upper case characters in your password");
   passwordArray.numbers = confirm("Do you want numbers in your password");
   passwordArray.specialChar = confirm("Do you want special characters in your password");
-  console.log(passwordArray);
+  //console.log(passwordArray);
   return passwordArray;
 }
 
@@ -161,6 +161,7 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   let passwordOptions = getPasswordOptions();
+ 
   let password = generatePassword(passwordOptions);
   var passwordText = document.querySelector('#password');
 
