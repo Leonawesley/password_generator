@@ -1,0 +1,1 @@
+![password generator demo](./05-javascript-challenge-demo.png)
